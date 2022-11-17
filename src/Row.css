@@ -1,0 +1,18 @@
+.row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 55px;
+  height: 55px;
+  border: 3px solid rgb(174, 172, 172);
+  margin: 8px 0px;
+  font-weight: bold;
+  font-size: 25px;
+  text-transform: uppercase;
+}

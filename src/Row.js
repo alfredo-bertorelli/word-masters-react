@@ -3,29 +3,10 @@ import Cell from "./Cell";
 import "./Row.css";
 
 class Row extends Component {
-  state = {
-    word: "",
-  };
-
-  componentDidMount() {
-    window.addEventListener("keydown", this.handleKey);
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener("keydown", this.handleKey);
-  }
-
-  handleKey = (e) => {
-    console.log("in handle: " + e.key);
-    this.setState((prevState) => {
-      return { word: prevState.word + e.key };
-    });
-  };
-
   render() {
-    const { word } = this.state;
+    console.log("in render: " + this.props.word);
+    const { word } = this.props;
     const wordArray = word.split("");
-    console.log("in render: " + wordArray);
     return (
       <div className="row">
         <Cell letter={wordArray[0]}></Cell>
